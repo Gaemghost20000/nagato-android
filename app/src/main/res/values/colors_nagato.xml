@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Nagato Brand Colors - Dark Purple Theme -->
+
+    <!-- Backgrounds -->
+    <color name="nagato_background">#0D0B14</color>
+    <color name="nagato_surface">#16121F</color>
+    <color name="nagato_surface_variant">#211B2E</color>
+
+    <!-- Primary palette -->
+    <color name="nagato_primary">#7E57C2</color>
+    <color name="nagato_primary_variant">#9D7FE8</color>
+    <color name="nagato_primary_dark">#5A3A9E</color>
+
+    <!-- Secondary / Accent -->
+    <color name="nagato_secondary">#00BCD4</color>
+    <color name="nagato_accent">#FF6B6B</color>
+    <color name="nagato_success">#7BBB44</color>
+    <color name="nagato_warning">#F5A623</color>
+
+    <!-- Text -->
+    <color name="nagato_text_primary">#E8E0F0</color>
+    <color name="nagato_text_secondary">#9E94AD</color>
+    <color name="nagato_text_disabled">#5A5068</color>
+
+    <!-- Dividers and borders -->
+    <color name="nagato_divider">#2A2438</color>
+    <color name="nagato_border">#3A3450</color>
+
+    <!-- Terminal colors -->
+    <color name="nagato_terminal_bg">#0D0B14</color>
+    <color name="nagato_terminal_fg">#B8B0C8</color>
+    <color name="nagato_terminal_cursor">#7E57C2</color>
+
+    <!-- Project chip colors -->
+    <color name="nagato_chip_active_bg">#7E57C2</color>
+    <color name="nagato_chip_inactive_bg">#211B2E</color>
+    <color name="nagato_chip_active_text">#FFFFFF</color>
+    <color name="nagato_chip_inactive_text">#9E94AD</color>
+
+    <!-- Navigation selector -->
+    <color name="nagato_nav_active">#7E57C2</color>
+    <color name="nagato_nav_inactive">#9E94AD</color>
+
+</resources>
