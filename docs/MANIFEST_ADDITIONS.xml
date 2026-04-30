@@ -1,0 +1,30 @@
+<!-- Add these inside <manifest> and <application> in the existing AndroidManifest.xml -->
+
+<!-- Permissions needed in <manifest> -->
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+<!-- Services to add inside <application> -->
+<service
+    android:name="com.nagato.agent.app.NagatoForegroundService"
+    android:foregroundServiceType="specialUse"
+    android:exported="false" />
+
+<service
+    android:name="com.nagato.agent.app.NagatoBubbleService"
+    android:exported="false" />
+
+<!-- The main Activity -->
+<activity
+    android:name="com.nagato.agent.app.NagatoActivity"
+    android:exported="true"
+    android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+    android:windowSoftInputMode="adjustResize">
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
+</activity>

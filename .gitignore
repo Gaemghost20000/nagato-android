@@ -1,4 +1,3 @@
-# Build outputs
 *.apk
 *.aab
 *.ap_
@@ -11,22 +10,14 @@
 /captures
 .externalNativeBuild/
 .cxx/
-
-# IDE
 *.iml
 .idea/
 *.swp
 *.swo
-
-# Local
 local.properties
 *.keystore
 *.jks
-
-# Gradle
 .gradle/
 !gradle/wrapper/gradle-wrapper.jar
-
-# OS
 .DS_Store
 Thumbs.db

@@ -1,0 +1,125 @@
+/* ============================================
+ * Nagato Theme Override for hermes-webui
+ * 
+ * Drop this into the webui or inject via WebView.evaluateJavascript()
+ * to rebrand with the Nagato dark purple scheme.
+ * ============================================ */
+
+:root {
+  /* Background hierarchy */
+  --nagato-bg:            #0D0B14;
+  --nagato-surface:       #16121F;
+  --nagato-surface-alt:   #211B2E;
+  --nagato-elevated:      #2A2438;
+  
+  /* Primary palette */
+  --nagato-primary:       #7E57C2;
+  --nagato-primary-hover: #9D7FE8;
+  --nagato-primary-dim:   #5A3A9E;
+  
+  /* Text */
+  --nagato-text:          #E8E0F0;
+  --nagato-text-dim:      #9E94AD;
+  --nagato-text-muted:    #5A5068;
+  
+  /* Accent */
+  --nagato-accent:        #00BCD4;
+  --nagato-danger:        #FF6B6B;
+  --nagato-success:       #7BBB44;
+  --nagato-warning:       #F5A623;
+  
+  /* Borders */
+  --nagato-border:        #3A3450;
+  
+  /* Terminal */
+  --nagato-term-bg:       #0D0B14;
+  --nagato-term-fg:       #B8B0C8;
+  --nagato-term-cursor:   #7E57C2;
+}
+
+/* --- Body --- */
+body {
+  background: var(--nagato-bg) !important;
+  color: var(--nagato-text) !important;
+}
+
+/* --- Chat Messages --- */
+.message {
+  background: var(--nagato-surface) !important;
+  border: 1px solid var(--nagato-border) !important;
+}
+.message.user {
+  border-left: 3px solid var(--nagato-primary) !important;
+}
+.message.agent {
+  border-left: 3px solid var(--nagato-accent) !important;
+}
+
+/* --- Sidebar / Nav --- */
+.sidebar, .nav, .project-list {
+  background: var(--nagato-surface) !important;
+  border-right: 1px solid var(--nagato-border) !important;
+}
+.sidebar .active, .nav .active {
+  background: var(--nagato-primary) !important;
+  color: white !important;
+}
+
+/* --- Input Area --- */
+.chat-input, .input-box, textarea, input[type="text"] {
+  background: var(--nagato-surface-alt) !important;
+  color: var(--nagato-text) !important;
+  border: 1px solid var(--nagato-border) !important;
+}
+.chat-input:focus, textarea:focus {
+  border-color: var(--nagato-primary) !important;
+}
+
+/* --- Buttons --- */
+button, .btn, .button {
+  background: var(--nagato-surface-alt) !important;
+  color: var(--nagato-text) !important;
+  border: 1px solid var(--nagato-border) !important;
+}
+button:hover, .btn:hover {
+  background: var(--nagato-primary) !important;
+  color: white !important;
+}
+button.accent, .btn-primary {
+  background: var(--nagato-primary) !important;
+  color: white !important;
+}
+button.danger {
+  background: var(--nagato-danger) !important;
+  color: white !important;
+}
+
+/* --- Scrollbars --- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--nagato-bg); }
+::-webkit-scrollbar-thumb { background: var(--nagato-primary-dim); border-radius: 3px; }
+
+/* --- Code Blocks --- */
+pre, code {
+  background: var(--nagato-elevated) !important;
+  color: var(--nagato-text) !important;
+  border: 1px solid var(--nagato-border) !important;
+}
+
+/* --- Agent Thinking / Streaming --- */
+.streaming, .thinking {
+  color: var(--nagato-accent) !important;
+  font-style: italic;
+}
+
+/* --- Mobile optimizations (when running inside Nagato app) --- */
+@media (max-width: 600px) {
+  .sidebar { display: none; }         /* Hide sidebar on phone */
+  .chat-area { width: 100% !important; }
+}
+
+/* --- Nagato app-specific: hide redundant chrome when bridge detected --- */
+.nagato-native .sidebar-toggle,
+.nagato-native .desktop-nav {
+  display: none !important;
+}
